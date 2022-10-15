@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments :: head (titulo='Descripcion de '+${usuario})"></head>
+
+<body>
+<header th:insert="/navbar.html :: header"> </header>
+
+<div class="container-fluid">
+  <div class="container-fluid">
+    <h1>Descripción del usuario : <td th:text="${usuario.id}"></td></h1>
+    <ul>
+      <li>Id: <td th:text="${usuario.id}"></td></li>
+      <li>Nombre: <td th:text="${usuario.nombre}"></td></li>
+      <li>Mail: <td th:text="${usuario.email}"></td></li>
+      <li>Fecha de Nacimiento: <td th:text="${usuario.fechaNacimiento}"></td></li>
+
+    </ul>
+  </div>
+
+</div>
+
+<div th:replace="fragments::javascript"/>
+
+</body>
+</html>
